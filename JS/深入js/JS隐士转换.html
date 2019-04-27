@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>隐式转换 | 做JS的舔狗</title>
+    <meta name="description" content="The front is the light">
+    <link rel="icon" type="image/x-icon" href="/bawseem.io/logo.png">
+    
+    <link rel="preload" href="/bawseem.io/assets/css/0.styles.013383d7.css" as="style"><link rel="preload" href="/bawseem.io/assets/js/app.4b407089.js" as="script"><link rel="preload" href="/bawseem.io/assets/js/44.671533bf.js" as="script"><link rel="prefetch" href="/bawseem.io/assets/js/10.762cdd58.js"><link rel="prefetch" href="/bawseem.io/assets/js/11.42b1af68.js"><link rel="prefetch" href="/bawseem.io/assets/js/12.e5d7c4e2.js"><link rel="prefetch" href="/bawseem.io/assets/js/13.280c2d03.js"><link rel="prefetch" href="/bawseem.io/assets/js/14.286833a2.js"><link rel="prefetch" href="/bawseem.io/assets/js/15.95576a40.js"><link rel="prefetch" href="/bawseem.io/assets/js/16.4b6f39ea.js"><link rel="prefetch" href="/bawseem.io/assets/js/17.a9c31f01.js"><link rel="prefetch" href="/bawseem.io/assets/js/18.f6f5ba52.js"><link rel="prefetch" href="/bawseem.io/assets/js/19.bda3b0eb.js"><link rel="prefetch" href="/bawseem.io/assets/js/2.90c53c94.js"><link rel="prefetch" href="/bawseem.io/assets/js/20.38f3ac39.js"><link rel="prefetch" href="/bawseem.io/assets/js/21.a6b82492.js"><link rel="prefetch" href="/bawseem.io/assets/js/22.9799170e.js"><link rel="prefetch" href="/bawseem.io/assets/js/23.9dda3a8d.js"><link rel="prefetch" href="/bawseem.io/assets/js/24.5c8d8300.js"><link rel="prefetch" href="/bawseem.io/assets/js/25.ad496433.js"><link rel="prefetch" href="/bawseem.io/assets/js/26.c267bd82.js"><link rel="prefetch" href="/bawseem.io/assets/js/27.f5ccb77c.js"><link rel="prefetch" href="/bawseem.io/assets/js/28.edc91f66.js"><link rel="prefetch" href="/bawseem.io/assets/js/29.a7580da2.js"><link rel="prefetch" href="/bawseem.io/assets/js/3.e535a655.js"><link rel="prefetch" href="/bawseem.io/assets/js/30.3adbb924.js"><link rel="prefetch" href="/bawseem.io/assets/js/31.1874c52b.js"><link rel="prefetch" href="/bawseem.io/assets/js/32.decc18dd.js"><link rel="prefetch" href="/bawseem.io/assets/js/33.95d18965.js"><link rel="prefetch" href="/bawseem.io/assets/js/34.908afae2.js"><link rel="prefetch" href="/bawseem.io/assets/js/35.3cfc6e60.js"><link rel="prefetch" href="/bawseem.io/assets/js/36.06f7aa2a.js"><link rel="prefetch" href="/bawseem.io/assets/js/37.cf6461ff.js"><link rel="prefetch" href="/bawseem.io/assets/js/38.18a94ded.js"><link rel="prefetch" href="/bawseem.io/assets/js/39.e4734e47.js"><link rel="prefetch" href="/bawseem.io/assets/js/4.bf56c6bc.js"><link rel="prefetch" href="/bawseem.io/assets/js/40.2bf66371.js"><link rel="prefetch" href="/bawseem.io/assets/js/41.b8e57b26.js"><link rel="prefetch" href="/bawseem.io/assets/js/42.98c2ee27.js"><link rel="prefetch" href="/bawseem.io/assets/js/43.4beca6ce.js"><link rel="prefetch" href="/bawseem.io/assets/js/45.84b09168.js"><link rel="prefetch" href="/bawseem.io/assets/js/46.d1588b5d.js"><link rel="prefetch" href="/bawseem.io/assets/js/47.c0f8db66.js"><link rel="prefetch" href="/bawseem.io/assets/js/48.553bf05a.js"><link rel="prefetch" href="/bawseem.io/assets/js/49.db1f9667.js"><link rel="prefetch" href="/bawseem.io/assets/js/5.43d0cfad.js"><link rel="prefetch" href="/bawseem.io/assets/js/50.6d77b0e9.js"><link rel="prefetch" href="/bawseem.io/assets/js/51.53857dbc.js"><link rel="prefetch" href="/bawseem.io/assets/js/52.4c825024.js"><link rel="prefetch" href="/bawseem.io/assets/js/53.afa9af0c.js"><link rel="prefetch" href="/bawseem.io/assets/js/54.09dadb04.js"><link rel="prefetch" href="/bawseem.io/assets/js/55.f7eed564.js"><link rel="prefetch" href="/bawseem.io/assets/js/56.38b5b1ff.js"><link rel="prefetch" href="/bawseem.io/assets/js/57.645403e8.js"><link rel="prefetch" href="/bawseem.io/assets/js/58.752074f6.js"><link rel="prefetch" href="/bawseem.io/assets/js/59.ae7c41ee.js"><link rel="prefetch" href="/bawseem.io/assets/js/6.09a32cd8.js"><link rel="prefetch" href="/bawseem.io/assets/js/60.7c086efe.js"><link rel="prefetch" href="/bawseem.io/assets/js/61.247150a4.js"><link rel="prefetch" href="/bawseem.io/assets/js/62.4ccb6131.js"><link rel="prefetch" href="/bawseem.io/assets/js/63.704fa105.js"><link rel="prefetch" href="/bawseem.io/assets/js/64.8b7e6e9f.js"><link rel="prefetch" href="/bawseem.io/assets/js/65.cdb517de.js"><link rel="prefetch" href="/bawseem.io/assets/js/66.3696c6d3.js"><link rel="prefetch" href="/bawseem.io/assets/js/67.4e99b381.js"><link rel="prefetch" href="/bawseem.io/assets/js/68.e077a1f0.js"><link rel="prefetch" href="/bawseem.io/assets/js/69.6b910bf7.js"><link rel="prefetch" href="/bawseem.io/assets/js/7.69e8d554.js"><link rel="prefetch" href="/bawseem.io/assets/js/70.6ba9fcad.js"><link rel="prefetch" href="/bawseem.io/assets/js/71.01285f33.js"><link rel="prefetch" href="/bawseem.io/assets/js/72.18d9b5c5.js"><link rel="prefetch" href="/bawseem.io/assets/js/73.452ecf9a.js"><link rel="prefetch" href="/bawseem.io/assets/js/8.e7df95f6.js"><link rel="prefetch" href="/bawseem.io/assets/js/9.10b4a8cd.js">
+    <link rel="stylesheet" href="/bawseem.io/assets/css/0.styles.013383d7.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/bawseem.io/" class="home-link router-link-active"><!----> <span class="site-name">做JS的舔狗</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/bawseem.io/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/bawseem.io/JS/" class="nav-link router-link-active">JS</a></li><li class="dropdown-item"><!----> <a href="/bawseem.io/CSS/" class="nav-link">CSS</a></li></ul></div></div><div class="nav-item"><a href="/bawseem.io/algorithm/" class="nav-link">前端算法</a></div><div class="nav-item"><a href="/bawseem.io/Interview/" class="nav-link">前端面试</a></div> <a href="https://github.com/Jack-rainbow/bawseem.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/bawseem.io/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">前端基础</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/bawseem.io/JS/" class="nav-link router-link-active">JS</a></li><li class="dropdown-item"><!----> <a href="/bawseem.io/CSS/" class="nav-link">CSS</a></li></ul></div></div><div class="nav-item"><a href="/bawseem.io/algorithm/" class="nav-link">前端算法</a></div><div class="nav-item"><a href="/bawseem.io/Interview/" class="nav-link">前端面试</a></div> <a href="https://github.com/Jack-rainbow/bawseem.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/bawseem.io/JS/" class="sidebar-link">Js舔狗</a></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>ES5</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>ES6</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Vue</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>TS</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>JS设计模式</span> <span class="arrow right"></span></p> <!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading open"><span>JS小知识点</span> <span class="arrow down"></span></p> <ul class="sidebar-group-items"><li><a href="/bawseem.io/JS/深入js/数组去重.html" class="sidebar-link">数组去重</a></li><li><a href="/bawseem.io/JS/深入js/assign.html" class="sidebar-link">Object.assign特点</a></li><li><a href="/bawseem.io/JS/深入js/axios鉴权.html" class="sidebar-link">axios拦截器（利用axios 的前置语法）</a></li><li><a href="/bawseem.io/JS/深入js/实现一个bind.html" class="sidebar-link">bind</a></li><li><a href="/bawseem.io/JS/深入js/判断浏览器.html" class="sidebar-link">判断浏览器</a></li><li><a href="/bawseem.io/JS/深入js/倒计时.html" class="sidebar-link">倒计时效果</a></li><li><a href="/bawseem.io/JS/深入js/原始封装类型.html" class="sidebar-link">原始封装类型</a></li><li><a href="/bawseem.io/JS/深入js/获取经纬度.html" class="sidebar-link">获取经纬度</a></li><li><a href="/bawseem.io/JS/深入js/获取最大值.html" class="sidebar-link">获取数组中最大的值</a></li><li><a href="/bawseem.io/JS/深入js/获取url.html" class="sidebar-link">获取url数据以对象形式返回</a></li><li><a href="/bawseem.io/JS/深入js/new操作.html" class="sidebar-link">new的过程中操作了什么？</a></li><li><a href="/bawseem.io/JS/深入js/js类型.html" class="sidebar-link">类型</a></li><li><a href="/bawseem.io/JS/深入js/冻结对象.html" class="sidebar-link">Object.seal与freeze区别</a></li><li><a href="/bawseem.io/JS/深入js/获取IP.html" class="sidebar-link">获取ip</a></li><li><a href="/bawseem.io/JS/深入js/js求平均数.html" class="sidebar-link">求平均数</a></li><li><a href="/bawseem.io/JS/深入js/相同元素存放.html" class="sidebar-link">js相同元素存放</a></li><li><a href="/bawseem.io/JS/深入js/内存管理.html" class="sidebar-link">内存管理</a></li><li><a href="/bawseem.io/JS/深入js/JS隐士转换.html" class="active sidebar-link">隐式转换</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/bawseem.io/JS/深入js/JS隐士转换.html#隐式转换" class="sidebar-link">隐式转换</a></li></ul></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>React</span> <span class="arrow right"></span></p> <!----></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="隐式转换"><a href="#隐式转换" aria-hidden="true" class="header-anchor">#</a> 隐式转换</h2> <p>1.说明</p> <pre><code>变量是对象时先调用valueOf,然后调用toString
+        字符串时先调用toString,然后调用valueOf
+</code></pre> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//当变量[symbol.toPrimitive](val)方法存在时，优先调用该方法</span>
+<span class="token comment">// 如果val为string，则先调用toString，然后调用valueOf</span>
+<span class="token comment">// 如果val是number，则先调用ValueOf，然后调用toString</span>
+
+user <span class="token operator">=</span> <span class="token punctuation">{</span>
+  name<span class="token punctuation">:</span> <span class="token string">&quot;John&quot;</span><span class="token punctuation">,</span>
+  money<span class="token punctuation">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+
+  <span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span>toPrimitive<span class="token punctuation">]</span><span class="token punctuation">(</span>hint<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token string">`hint: </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hint<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> hint <span class="token operator">==</span> <span class="token string">&quot;string&quot;</span> <span class="token operator">?</span> <span class="token template-string"><span class="token string">`{name: &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot;}`</span></span> <span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>money<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+疑问：
+    <span class="token number">1.</span>为什么number会优先调用valueOf？
+
+        当x<span class="token punctuation">,</span><span class="token function">y</span><span class="token punctuation">(</span><span class="token operator">==</span>号两边的值<span class="token punctuation">)</span>为String<span class="token punctuation">,</span>Number<span class="token punctuation">,</span>Boolean时会通过toNumber进行number转换然后在比较
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br></div></div><p>2.解释</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//变量为对象</span>
+<span class="token keyword">let</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    valueOf<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'object'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    toString<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'toString'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+obj <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">//object1</span>
+
+<span class="token comment">//变量为字符串</span>
+<span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token function">String</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    valueOf<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'object'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    toString<span class="token punctuation">:</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'toString'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+str <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">// toString1</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><p>3.比较运算</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code>
+<span class="token number">1.</span><span class="token operator">==</span>号两边有<span class="token number">NaN</span>，返回<span class="token boolean">false</span>
+<span class="token number">2.</span><span class="token operator">==</span>号左边如果是<span class="token keyword">null</span>或者undefined，返回<span class="token boolean">true</span><span class="token punctuation">(</span>自身与自身相等 <span class="token keyword">null</span><span class="token operator">==</span><span class="token keyword">null</span><span class="token comment">//undefined == undefined)，否则返回false</span>
+<span class="token number">3.</span>如果<span class="token operator">==</span>号两边类型不一致，且x，y为String<span class="token punctuation">,</span>Number<span class="token punctuation">,</span>Boolean中的某一类型的时候，则将<span class="token constant">X</span><span class="token punctuation">,</span><span class="token constant">Y</span><span class="token function">使用toNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span>进行转换为Number然后在比较
+<span class="token number">4.</span>如果x<span class="token punctuation">,</span>y有一个是object<span class="token punctuation">,</span>则优先使用toPrimtive函数转换为原始类型，然后在进行比较
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>4.转换规则</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  只有当类型为Array,Object,Function才会只有ToPrimitive
+  如何实现一个Toprimitive？
+  如何给Toprimitive传入第二个转换的参数？
+  当进行转换的时候是否是一直返回到原始值的时候才return？ 
+    在转换的过程中首先进行ToPrimitive(val,PreferredType)转换,当PreferredType没有制定参数时，默认第一步会先进行number转换，然后在进行toString和valueof转换
+  
+
+  1.隐士类型转换里边有4种类型转换规则
+  
+    toNumber,toPrimitive,toString,toBoolean
+    1.toSting ---只针对默认情况
+      String([1,2,3,4]) ---&gt; '1,2,3,4'
+      String(null) ---&gt; 'null'
+      String(undefined) ---&gt;   'undefined'
+      String(10) ---&gt; '10'
+      String({}) ---&gt; '[object object]'
+      String(NaN) ---&gt; 'NaN'
+
+    总结：通过string转换为除{},其他均为自身
+
+    2.toNumber
+      Number(null)  ---&gt;  0
+      Number(undefined)  ---&gt; NaN
+      Number(NaN)  ---&gt;  NaN
+      Number('10')  ---&gt; 10
+      Number('10a')  ---&gt; NaN 
+      Number(false)  ---&gt; 0
+      Number(true)  ---&gt; 1
+      Number([])  ---&gt; 0
+      Number({})  ---&gt; NaN
+
+    总结:
+      1.通过Number转换为NaN的有undefined，'10a',{}.为什么是NaN？
+
+    3.toBoolean
+
+      Boolean(null)   ---&gt;  false
+      Boolean(undefined) ---&gt; false
+      Boolean('1') ---&gt; true
+      Boolean(1) ---&gt;true
+      Boolean([]) ---&gt; true
+      Boolean({}) ---&gt; true
+      Boolean(NaN) ---&gt;false
+      Boolean('10a') ---&gt;true
+      Boolean('') ---&gt; false
+
+    总结：
+      1.当值为 false,undefined,null,NaN,'',+0,-0的时候为false，其他都为true
+    
+    4.toPrimitive-对象/数组转换为原始类型的操作
+      
+      当对象要转换为原始类型的时候，首先会去执行对象的valueOf方法，如果valueof返回原始类型的值(undefined，null，string，number，boolean)是原始类型的话，则toPrimitive的结果就是这个值
+      如果valueOf不存在或者valueOf返回的不是原始类型的值，那么就会去调用Tostring值
+
+    注意：不同的类型优先调用的方法是不同的，例如Date，优先调用toString方法
+
+    总结：
+      当值为对象类型的时候执行toPrimitive,如果是对象的话首先去调用valueOf，如果valueOf返回的不是原始类型则去调用toString，当toString返回的也不是原始类型的时候则抛错误。(如果没有返回返回原始类型是会一直查找的，直到找不到返回错误信息)
+
+
+    对象类型在tonumber时会先toPrimitive？？？如何理解？
+    1.Number([])
+      当转换Number的时候会先执行toPrimitive,因为valueOf()返回自身，所以调用toString，返回&quot;&quot;(&quot;&quot; == false),然后去执行Number转换，得到0
+
+      由此可以看出在类型进行的时候，会优先执行toPrimitive，然后在去执行相应的类型转换。是否正确？？？？？
+    2.{}进行转换
+      {}进行原始值转换的过程中是回返回toPrimitive,且{}原始值是[object object]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br></div></div><p>6.转换规则总结</p> <p>1.当比较的时候如何优先处理？
+2.运算符优先级？
+3.对象与对象比较不会进行类型转换？
+[] == []??
+{} == {}??</p> <p>7.考题</p> <p>1.[]  == ![] //为什么返回true</p> <p>2.以下输出什么??</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token punctuation">{</span>
+  i<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+  toString<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> a<span class="token punctuation">.</span>i<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>a <span class="token operator">==</span> <span class="token number">1</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">2</span> <span class="token operator">&amp;&amp;</span> a <span class="token operator">==</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'hello world!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="3"><li>(+ -  !)各会执行什么操作</li></ol> <blockquote><p>.i:+ 运算符</p></blockquote> <p>+运算符会将值转换为Number()类型，如果是数字直接相接，因为第一步会执行toPrimitive，如果是原始值直接返回，如果不是那么使用隐式转换里边的toNumber()</p> <blockquote><p>ii:- 运算符</p></blockquote> <p>-运算符也是将值转换为Number类型，使用的是toNumber()</p> <blockquote><p>iii: !运算符</p></blockquote> <p>! 运算符是将值转换为boolean类型，使用的是Boolean()，切记(undefined，null,+0,-0,'',NaN,false)默认为false</p> <p>4.[null]  == 0 ? || [undefined]  == 0 ?</p> <pre><code>因为是对象所以会调用toPrimitive,null和undefined的原始值都是false所以返回true
+</code></pre> <p>5.a == 1 &amp;&amp; a == 2 &amp;&amp; a == 3;</p> <p>6.{}+1 / ({}+1)</p> <pre><code>{}调用toPrimtive的时候会返回一个[object  object]。
+</code></pre> <p>7.浏览器如何对{}解析的？</p> <p>8.toPrimtive实现</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> <span class="token function-variable function">toPrimtive</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>obj<span class="token punctuation">,</span>preferrdType <span class="token operator">=</span> <span class="token string">'Number'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">let</span> utils <span class="token operator">=</span> <span class="token punctuation">{</span>
+    typeOf<span class="token punctuation">:</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> Object<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>toString<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//返回类型</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    isPrimtive<span class="token punctuation">:</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+      <span class="token keyword">let</span> types <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Null'</span><span class="token punctuation">,</span><span class="token string">'undefined'</span><span class="token punctuation">,</span><span class="token string">'String'</span><span class="token punctuation">.</span><span class="token string">'Number'</span><span class="token punctuation">,</span><span class="token string">'Boolean'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">return</span> types<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>utils<span class="token punctuation">.</span><span class="token function">isPrimitive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> obj<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  preferredType <span class="token operator">=</span> <span class="token punctuation">(</span>preferredType <span class="token operator">==</span> <span class="token string">'String'</span> <span class="token operator">||</span> utils<span class="token punctuation">.</span><span class="token function">types</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'Date'</span><span class="token punctuation">)</span><span class="token operator">?</span><span class="token string">'String'</span><span class="token punctuation">:</span><span class="token string">'Number'</span> <span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>utils<span class="token punctuation">.</span>isPrimtive<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>utils<span class="token punctuation">.</span><span class="token function">isPrimitive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> obj<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> obj<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>utils<span class="token punctuation">.</span><span class="token function">isPrimitive</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> obj<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> obj<span class="token punctuation">.</span><span class="token function">valueOf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>vue
+1.为什么不建议用index作为key值？会有什么后果
+2.数组有哪些方法支持响应式更新。。如果不支持如何处理，底层原理是如何实现的？
+3.节流使用，停止输入500ms后才更新
+4.beforeUpdate和updated里边不可以更改依赖数据，否则会造成死循环，
+beforeUpdate 移除DOM事件
+updated 添加DOM事件
+5.函数式组件</p></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/Jack-rainbow/bawseem.io/edit/master/docs/JS/深入js/JS隐士转换.md" target="_blank" rel="noopener noreferrer">帮助我改善这个页面</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/bawseem.io/assets/js/app.4b407089.js" defer></script><script src="/bawseem.io/assets/js/44.671533bf.js" defer></script>
+  </body>
+</html>
